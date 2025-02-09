@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Password</title>
+</head>
+<body>
+    {% include 'authentication/navbar.html' %}
+    <div class="card text-center">
+        <br>
+        <div class="card-body">
+          <h5 class="card-title">Welcome to our app</h5>
+          <div class="container">
+            <h2>Your Profile</h2>
+        
+            <div class="profile-info">
+              <p><strong>Username:</strong> {{ user.username }}</p>
+              <p><strong>Email:</strong> {{ user.email }}</p>
+              <p><strong>Date Joined:</strong> {{ user.date_joined }}</p>
+              <p><strong>Last Updated:</strong> {{ user.last_login }}</p>
+            </div>
+        
+            <div class="actions">
+              <a href="{% url 'dashboard' %}" class="btn btn-secondary">Go back to Dashboard</a>
+              <a href="{% url 'signout' %}" class="btn btn-danger">Logout</a>
+            </div>
+          </div>
+        </div>
+    </div>
+</body>
+</html>
